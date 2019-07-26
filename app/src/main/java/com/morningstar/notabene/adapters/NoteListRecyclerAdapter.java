@@ -12,13 +12,14 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.morningstar.notabene.R;
-import com.morningstar.notabene.models.NoteModel;
+import com.morningstar.notabene.models.realmmodels.NoteModel;
 
 import java.util.ArrayList;
 
@@ -36,7 +37,7 @@ public class NoteListRecyclerAdapter extends RecyclerView.Adapter<NoteListRecycl
     @NonNull
     @Override
     public NoteListItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        view = LayoutInflater.from(context).inflate(R.layout.note_list_item_layout, null);
+        view = LayoutInflater.from(context).inflate(R.layout.note_list_item_layout, parent, false);
 
         return new NoteListItemViewHolder(view);
     }
@@ -46,6 +47,7 @@ public class NoteListRecyclerAdapter extends RecyclerView.Adapter<NoteListRecycl
         holder.textViewNoteTitle.setText(noteModels.get(position).getNoteTitle());
         holder.textViewNoteText.setText(noteModels.get(position).getNoteText());
         holder.textViewNoteCreationDate.setText(noteModels.get(position).getNoteCreatedDate());
+        holder.imageViewNoteImage.setVisibility(View.GONE);
     }
 
     @Override
@@ -58,12 +60,14 @@ public class NoteListRecyclerAdapter extends RecyclerView.Adapter<NoteListRecycl
         TextView textViewNoteTitle;
         TextView textViewNoteText;
         TextView textViewNoteCreationDate;
+        ImageView imageViewNoteImage;
 
         public NoteListItemViewHolder(@NonNull View itemView) {
             super(itemView);
             textViewNoteTitle = itemView.findViewById(R.id.note_list_item_title);
             textViewNoteText = itemView.findViewById(R.id.note_list_item_text);
             textViewNoteCreationDate = itemView.findViewById(R.id.note_list_item_date);
+            imageViewNoteImage = itemView.findViewById(R.id.note_list_item_image);
         }
     }
 }

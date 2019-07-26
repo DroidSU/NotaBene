@@ -25,7 +25,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.michaldrabik.tapbarmenulib.TapBarMenu;
 import com.morningstar.notabene.R;
 import com.morningstar.notabene.adapters.NoteListRecyclerAdapter;
-import com.morningstar.notabene.models.NoteModel;
+import com.morningstar.notabene.models.eventbusmodels.TextNoteSavedModel;
+import com.morningstar.notabene.models.realmmodels.NoteModel;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import java.util.ArrayList;
 
@@ -61,15 +66,21 @@ public class MainActivity extends AppCompatActivity {
         getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
         getWindow().setExitTransition(new Explode());
         setContentView(R.layout.activity_main);
+
         ButterKnife.bind(this);
         realm = Realm.getDefaultInstance();
+        EventBus.getDefault().register(this);
 
-        fetchNotes();
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Notes");
+        getSupportActionBar().setDisplayShowTitleEnabled(true);
 
         setupRecycler();
     }
 
     private void setupRecycler() {
+        fetchNotes();
+
         noteListRecyclerAdapter = new NoteListRecyclerAdapter(this, noteModelArrayList);
         recyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
 
@@ -108,11 +119,16 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, "Nothing yet", Toast.LENGTH_SHORT).show();
     }
 
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void updateRecyclerEvent(TextNoteSavedModel textNoteSavedModel) {
+        setupRecycler();
+    }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
         if (!realm.isClosed())
             realm.close();
+        EventBus.getDefault().unregister(this);
     }
 }

@@ -10,6 +10,8 @@ package com.morningstar.notabene;
 
 import android.app.Application;
 
+import androidx.multidex.MultiDex;
+
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
 
@@ -22,5 +24,7 @@ public class CustomApplication extends Application {
 
         RealmConfiguration config = new RealmConfiguration.Builder().build();
         Realm.setDefaultConfiguration(config);
+
+        MultiDex.install(this);
     }
 }

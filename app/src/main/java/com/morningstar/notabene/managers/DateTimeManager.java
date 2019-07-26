@@ -17,7 +17,7 @@ public class DateTimeManager {
     public  static String getCurrentDateAsString(){
         Date currentDate = Calendar.getInstance().getTime();
 
-        SimpleDateFormat df = new SimpleDateFormat("dd/MMM/yyyy HH:mm a");
+        SimpleDateFormat df = new SimpleDateFormat("dd/MMM/yyyy");
 
         return df.format(currentDate);
     }

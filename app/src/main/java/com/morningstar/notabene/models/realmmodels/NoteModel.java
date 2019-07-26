@@ -6,7 +6,7 @@
  * P.S.: In case you are planning to use this without mentioning me, you will be met with mean judgemental looks and sarcastic comments.
  */
 
-package com.morningstar.notabene.models;
+package com.morningstar.notabene.models.realmmodels;
 
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;

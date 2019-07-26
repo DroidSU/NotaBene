@@ -1,3 +1,11 @@
+/*
+ * Created by Sujoy Datta. Copyright (c) 2019. All rights reserved.
+ *
+ * To the person who is reading this..
+ * When you finally understand how this works, please do explain it to me too at sujoydatta26@gmail.com
+ * P.S.: In case you are planning to use this without mentioning me, you will be met with mean judgemental looks and sarcastic comments.
+ */
+
 apply plugin: 'com.android.application'
 apply plugin: 'realm-android'
 
@@ -17,11 +25,13 @@ android {
             shrinkResources true
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            multiDexEnabled true
         }
         debug {
             debuggable true
             shrinkResources false
             minifyEnabled false
+            multiDexEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -42,23 +52,21 @@ dependencies {
     implementation "androidx.annotation:annotation:1.1.0"
     implementation "com.google.android.material:material:1.1.0-alpha08"
     implementation "androidx.multidex:multidex:2.0.1"
-
     //CircleMenu
     implementation 'com.ramotion.circlemenu:circle-menu:0.3.2'
-
     //ButterKnife
     implementation 'com.jakewharton:butterknife:10.1.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
-
     //MaterialDrawer
     implementation "com.mikepenz:materialdrawer:6.1.2"
-
     //cardView
     implementation "androidx.cardview:cardview:1.0.0"
-
     //TapBar
     implementation "com.github.michaldrabik:TapBarMenu:1.0.6"
     //CircleImageView
     implementation 'de.hdodenhof:circleimageview:3.0.0'
-
+    //LottieAnimationView
+    implementation "com.airbnb.android:lottie:3.0.7"
+    //EventBus
+    implementation "org.greenrobot:eventbus:3.1.1"
 }
