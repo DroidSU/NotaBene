@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by Sujoy Datta. Copyright (c) 2019. All rights reserved.
+  ~
+  ~ To the person who is reading this..
+  ~ When you finally understand how this works, please do explain it to me too at sujoydatta26@gmail.com
+  ~ P.S.: In case you are planning to use this without mentioning me, you will be met with mean judgemental looks and sarcastic comments.
+  -->
+
+<resources>
+    <array name="icons">
+        <item>@drawable/pencil</item>
+        <item>@drawable/ic_mic_black_24dp</item>
+    </array>
+
+    <array name="colors">
+        <item>@color/md_blue_600</item>
+        <item>@color/md_orange_500</item>
+        <!--<item>@android:color/holo_green_dark</item>-->
+        <!--<item>@android:color/holo_red_light</item>-->
+        <!--<item>@android:color/holo_purple</item>-->
+    </array>
+</resources>
