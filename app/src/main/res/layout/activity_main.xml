@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by Sujoy Datta. Copyright (c) 2019. All rights reserved.
+  ~
+  ~ To the person who is reading this..
+  ~ When you finally understand how this works, please do explain it to me too at sujoydatta26@gmail.com
+  ~ P.S.: In case you are planning to use this without mentioning me, you will be met with mean judgemental looks and sarcastic comments.
+  -->
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activities.MainActivity"
+    android:layout_marginBottom="4dp"
     android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
@@ -57,7 +66,7 @@
             android:layout_weight="1"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:src="@drawable/pencil"/>
+            android:src="@drawable/icon_pencil" />
 
         <Space
             android:layout_width="56dp"
@@ -71,7 +80,7 @@
             android:layout_weight="1"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:src="@drawable/ic_mic_black_24dp"
+            android:src="@drawable/icon_mic"
             />
 
     </com.michaldrabik.tapbarmenulib.TapBarMenu>

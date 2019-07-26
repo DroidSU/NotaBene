@@ -9,8 +9,8 @@
 
 <resources>
     <array name="icons">
-        <item>@drawable/pencil</item>
-        <item>@drawable/ic_mic_black_24dp</item>
+        <item>@drawable/icon_pencil</item>
+        <item>@drawable/icon_mic</item>
     </array>
 
     <array name="colors">
