@@ -52,8 +52,6 @@ dependencies {
     implementation "androidx.annotation:annotation:1.1.0"
     implementation "com.google.android.material:material:1.1.0-alpha08"
     implementation "androidx.multidex:multidex:2.0.1"
-    //CircleMenu
-    implementation 'com.ramotion.circlemenu:circle-menu:0.3.2'
     //ButterKnife
     implementation 'com.jakewharton:butterknife:10.1.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
@@ -69,4 +67,6 @@ dependencies {
     implementation "com.airbnb.android:lottie:3.0.7"
     //EventBus
     implementation "org.greenrobot:eventbus:3.1.1"
+    //CustomFAB
+    implementation 'com.robertlevonyan.view:CustomFloatingActionButton:2.1.1'
 }

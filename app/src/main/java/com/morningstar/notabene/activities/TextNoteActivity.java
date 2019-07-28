@@ -22,6 +22,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.morningstar.notabene.R;
@@ -46,6 +47,8 @@ public class TextNoteActivity extends AppCompatActivity {
     TextView textViewNoteText;
     @BindView(R.id.textNote_animation_view)
     LottieAnimationView animationView;
+    @BindView(R.id.textNote_images_recycler)
+    RecyclerView imageRecycler;
 
     private long noteId;
     private String noteTitle;

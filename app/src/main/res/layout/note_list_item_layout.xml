@@ -27,7 +27,7 @@
             <ImageView
                 android:id="@+id/note_list_item_image"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:scaleType="fitXY" />
 
             <TextView
@@ -35,20 +35,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Note Title"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="2dp"
                 android:ellipsize="end"
                 android:textColor="@color/md_black_1000"
                 android:textSize="18sp"
                 android:maxLines="1"
-                android:padding="8dp"
+                android:padding="4dp"
                 android:layout_marginStart="8dp"/>
 
             <TextView
                 android:id="@+id/note_list_item_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:padding="8dp"
+                android:layout_marginTop="4dp"
+                android:padding="4dp"
                 android:text="Note Text"
                 android:textSize="16sp"
                 android:layout_marginStart="8dp"/>
@@ -59,10 +59,11 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="end"
                 android:textColor="@color/md_black_1000"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:textStyle="italic"
-                android:padding="8dp"
+                android:padding="4dp"
                 android:text="Note Date"
+                android:textAlignment="viewEnd"
                 android:textSize="14sp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
